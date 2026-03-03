@@ -2,18 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <h1 id="main-title">Taras Yurkiv</h1>
+    <title>Taras Yurkiv - CV</title>
+
     <link rel="stylesheet" href="styles.css">
+
+    <style>
+        h2 {
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+    </style>
 </head>
+
 <body>
 
-<header>
-    <h1>Taras Yurkiv</h1>
+<div class="container">
+
+<header id="main-header">
+    <h1 id="main-title">Taras Yurkiv</h1>
+
     <p><strong>Email:</strong> 
         <a href="mailto:urkivtaras543@gmail.com">urkivtaras543@gmail.com</a>
     </p>
+
     <p><strong>Phone:</strong> +380687305187</p>
-    <p><strong>Address:</strong> Horodotska 247, 79022 Lviv</p>
+
     <p><strong>LinkedIn:</strong> 
         <a href="https://www.linkedin.com/in/тарас-юрків-8423243a8" target="_blank">
             linkedin.com/in/тарас-юрків-8423243a8
@@ -25,11 +38,10 @@
 
 <section>
     <h2>About Me</h2>
-    <p>
+    <p style="color: #444;">
         Responsible and communicative specialist with experience in sales, 
         striving to develop in the field of customer support. 
-        I have effective communication and problem-solving skills, 
-        which help me provide a high level of service.
+        I have effective communication and problem-solving skills.
     </p>
 </section>
 
@@ -57,8 +69,8 @@
 
 <section>
     <h2>Skills</h2>
-    <ul>
-        <li>Communication</li>
+    <ul class="skills">
+        <li class="highlight">Communication</li>
         <li>Teamwork</li>
         <li>Stress resistance</li>
         <li>Customer support</li>
@@ -71,8 +83,8 @@
 <section>
     <h2>Languages</h2>
     <ul>
-        <li>Ukrainian – Native</li>
-        <li>English –  Upper-Intermediate</li>
+        <li data-level="native">Ukrainian – Native</li>
+        <li data-level="upper">English – Upper-Intermediate</li>
     </ul>
 </section>
 
@@ -94,9 +106,41 @@
     </ul>
 </section>
 
+</div>
+
+<section>
+    <h2>Employer Comments</h2>
+    <div id="comments"></div>
+</section>
+
+<button id="themeToggle">Toggle Theme</button>
+
+<!-- Modal -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <h3>Feedback Form</h3>
+
+        <form action="https://formspree.io/f/xjgeqkoe" method="POST">
+            
+            <input type="text" name="name" placeholder="Your Name" required>
+
+            <input type="email" name="email" placeholder="Your Email" required>
+
+            <input type="tel" name="phone" placeholder="Your Phone" required>
+
+            <textarea name="message" placeholder="Your Message" required></textarea>
+
+            <button type="submit">Send</button>
+        </form>
+
+        <button id="closeModal">Close</button>
+    </div>
+</div>
+
 <footer>
-    <p>&copy; 2026 Taras Yurkiv</p>
+    <p>© 2026 Taras Yurkiv</p>
 </footer>
 
+<script src="script.js"></script>
 </body>
 </html>
